@@ -31,16 +31,16 @@ public class TestHoleCommand implements CommandExecutor {
         for (int i=1; i <= 3; i++) {
             Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
         }
-        
+
         //Left column blocks
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,-2), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,12,-2), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,14,-2), Material.WHITE_CONCRETE, (byte) 0);
+        for (int i=10; i <= 14; i=1+2) {
+            Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
+        }
 
         //Right column blocks
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,2), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,12,2), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,14,2), Material.WHITE_CONCRETE, (byte) 0);
+        for (int i=10; i <= 14; i=1+2) {
+            Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
+        }
 
 
         return true;
