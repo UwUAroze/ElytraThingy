@@ -38,19 +38,19 @@ public class TestHoleCommand implements CommandExecutor {
             }, 10 * multi);
         }
 
-//        for (int i=1; i <= 3; i++) {
-//            ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
-//        }
-//
-//        //Left column blocks
-//        for (int i=10; i <= 14; i=i+2) {
-//            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
-//        }
-//
-//        //Right column blocks
-//        for (int i=10; i <= 14; i=i+2) {
-//            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,2), Material.WHITE_CONCRETE, (byte) 0);
-//        }
+        for (int i=1; i <= 3; i++) {
+            ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
+        }
+
+        //Left column blocks
+        for (int i=10; i <= 14; i=i+2) {
+            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
+        }
+
+        //Right column blocks
+        for (int i=10; i <= 14; i=i+2) {
+            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,2), Material.WHITE_CONCRETE, (byte) 0);
+        }
 
 
         return true;
