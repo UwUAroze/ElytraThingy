@@ -9,6 +9,9 @@ public final class ElytraThingy extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+
+        getCommand("testHole").setExecutor(new TestHoleCommand());
+
         GenerateLoop.start();
 
     }
