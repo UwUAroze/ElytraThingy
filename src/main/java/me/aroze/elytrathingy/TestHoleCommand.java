@@ -14,14 +14,16 @@ public class TestHoleCommand implements CommandExecutor {
 
         Location middle = ((Player) sender).getLocation();
 
+        middle.getBlock().setType(Material.STONE);
+
         Location bottomLeft = middle.clone().add(-2, -2, 0);
 
 
         bottomLeft.clone().add(0, -1, 1).getBlock().setType(Material.BARRIER);
-        bottomLeft.clone().add(0, -1, 2).getBlock().setType(Material.BARRIER);
+        bottomLeft.clone().add(0, -1, -1).getBlock().setType(Material.BARRIER);
 
         Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,1), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,2), Material.WHITE_CONCRETE, (byte) 0);
+        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,-1), Material.WHITE_CONCRETE, (byte) 0);
 
 
         return true;
