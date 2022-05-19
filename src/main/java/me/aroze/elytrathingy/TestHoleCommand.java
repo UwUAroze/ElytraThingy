@@ -39,7 +39,7 @@ public class TestHoleCommand implements CommandExecutor {
 
         //Right column blocks
         for (int i=10; i <= 14; i=i+2) {
-            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
+            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,4), Material.WHITE_CONCRETE, (byte) 0);
         }
 
 
