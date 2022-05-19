@@ -25,7 +25,7 @@ public class TestHoleCommand implements CommandExecutor {
         bottomLeft.clone().add(0, -1, -1).getBlock().setType(Material.BARRIER);
         //Column block catchers
         bottomLeft.getBlock().setType(Material.BARRIER);
-        bottomLeft.clone().add(0, 0, 2).getBlock().setType(Material.BARRIER);
+        bottomLeft.clone().add(0, 0, 4).getBlock().setType(Material.BARRIER);
 
         //Bottom row blocks
         Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,1), Material.WHITE_CONCRETE, (byte) 0);
