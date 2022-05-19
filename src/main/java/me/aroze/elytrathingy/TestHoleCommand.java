@@ -34,7 +34,7 @@ public class TestHoleCommand implements CommandExecutor {
             multi = i;
             int finalI = i;
             Bukkit.getScheduler().runTaskLater(ElytraThingy.getInstance(), () -> {
-                ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0,10, finalI), Material.WHITE_CONCRETE, (byte) 0);
+                ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0.5,10, finalI), Material.WHITE_CONCRETE, (byte) 0);
             }, 10 * multi);
         }
 
