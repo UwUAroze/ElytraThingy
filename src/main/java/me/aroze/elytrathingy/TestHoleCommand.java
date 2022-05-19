@@ -28,19 +28,27 @@ public class TestHoleCommand implements CommandExecutor {
         bottomLeft.clone().add(0, 0, 4).getBlock().setType(Material.BARRIER);
 
         //Bottom row blocks
+
+        int multi;
         for (int i=1; i <= 3; i++) {
-            ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
+            multi = i;
+            Bukkit.getScheduler().runTaskLater(ElytraThingy.getInstance(), () -> {
+            }, 10 * multi);
         }
 
-        //Left column blocks
-        for (int i=10; i <= 14; i=i+2) {
-            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
-        }
-
-        //Right column blocks
-        for (int i=10; i <= 14; i=i+2) {
-            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,2), Material.WHITE_CONCRETE, (byte) 0);
-        }
+//        for (int i=1; i <= 3; i++) {
+//            ((Player) sender).getWorld().spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
+//        }
+//
+//        //Left column blocks
+//        for (int i=10; i <= 14; i=i+2) {
+//            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,-2), Material.WHITE_CONCRETE, (byte) 0);
+//        }
+//
+//        //Right column blocks
+//        for (int i=10; i <= 14; i=i+2) {
+//            ((Player) sender).getWorld().spawnFallingBlock(middle.clone().add(0,i,2), Material.WHITE_CONCRETE, (byte) 0);
+//        }
 
 
         return true;
