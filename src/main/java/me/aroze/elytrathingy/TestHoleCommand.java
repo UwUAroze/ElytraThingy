@@ -14,9 +14,9 @@ public class TestHoleCommand implements CommandExecutor {
 
         Location middle = ((Player) sender).getLocation();
 
-        middle.getBlock().setType(Material.STONE);
+        middle.clone().add(1,0,0).getBlock().setType(Material.STONE);
 
-        Location bottomLeft = middle.clone().add(-2, -2, 0);
+        Location bottomLeft = middle.clone().add(0, -2, -2);
 
 
         //Bottom row block catchers
