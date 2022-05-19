@@ -20,9 +20,9 @@ public class TestHoleCommand implements CommandExecutor {
 
 
         //Bottom row block catchers
-        bottomLeft.clone().add(0, -1, 1).getBlock().setType(Material.BARRIER);
-        bottomLeft.clone().add(0, -1, 0).getBlock().setType(Material.BARRIER);
-        bottomLeft.clone().add(0, -1, -1).getBlock().setType(Material.BARRIER);
+        for (int i=1; i <= 3; i++) {
+            bottomLeft.clone().add(0, -1, i).getBlock().setType(Material.BARRIER);
+        }
         //Column block catchers
         bottomLeft.getBlock().setType(Material.BARRIER);
         bottomLeft.clone().add(0, 0, 4).getBlock().setType(Material.BARRIER);
