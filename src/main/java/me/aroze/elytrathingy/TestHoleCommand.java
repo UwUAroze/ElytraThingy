@@ -28,10 +28,10 @@ public class TestHoleCommand implements CommandExecutor {
         bottomLeft.clone().add(0, 0, 4).getBlock().setType(Material.BARRIER);
 
         //Bottom row blocks
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,1), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,0), Material.WHITE_CONCRETE, (byte) 0);
-        Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,-1), Material.WHITE_CONCRETE, (byte) 0);
-
+        for (int i=1; i <= 3; i++) {
+            Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,i), Material.WHITE_CONCRETE, (byte) 0);
+        }
+        
         //Left column blocks
         Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,10,-2), Material.WHITE_CONCRETE, (byte) 0);
         Bukkit.getWorld(((Player) sender).getWorld().getName()).spawnFallingBlock(bottomLeft.clone().add(0,12,-2), Material.WHITE_CONCRETE, (byte) 0);
